@@ -1,5 +1,5 @@
 # floor-heating-proportional-valve
-A diy proportional heating valve
+A diy proportional heating valve actuator
 
 <img src="https://github.com/nliaudat/floor-heating-proportional-valve/blob/main/imgs/2022-09-11%2017.59.jpg" width="300">
 
