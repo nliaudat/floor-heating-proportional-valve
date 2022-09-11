@@ -1,0 +1,44 @@
+{
+    "fileFormatVersion": "1",
+    "parameterSets": {
+        "New set 1": {
+            "$fn": "360",
+            "cap_pitch": "1.5",
+            "cover_enable": "false",
+            "cover_slices": "20",
+            "cursor_enable": "true",
+            "cursor_plug_sliding_cube": "[3, 2.5, 6]",
+            "cursor_space": "0.25",
+            "debug": "false",
+            "motor": "[10, 12, 26.25]",
+            "motor_spacer": "[5, 12, 5]",
+            "nut_delta": "0.90000000000000002",
+            "print": "false",
+            "print_actuator": "true",
+            "print_slider": "false",
+            "sliding_tolerance": "0.80000000000000004",
+            "top_cover_size": "2",
+            "wrench_size": "36"
+        },
+        "New set 2": {
+            "$fn": "360",
+            "cap_pitch": "1.5",
+            "cover_enable": "false",
+            "cover_slices": "20",
+            "cursor_enable": "true",
+            "cursor_plug_sliding_cube": "[3, 2.5, 6]",
+            "cursor_space": "0.25",
+            "debug": "true",
+            "motor": "[10, 12, 26.25]",
+            "motor_spacer": "[5, 12, 5]",
+            "nut_delta": "0.90000000000000002",
+            "pcb_enable": "true",
+            "print": "false",
+            "print_actuator": "true",
+            "print_slider": "true",
+            "sliding_tolerance": "0.80000000000000004",
+            "top_cover_size": "2",
+            "wrench_size": "36"
+        }
+    }
+}
