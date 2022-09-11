@@ -19,6 +19,8 @@ insert m3 nut into slider :
 <img src="https://github.com/nliaudat/floor-heating-proportional-valve/blob/main/imgs/nut.PNG" width="300">
 
 
+If you do not have M30x1.5 valve, look at [adapters](https://github.com/nliaudat/floor-heating-proportional-valve/tree/main/adapters)
+
 ## Licence: 
 * Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC-BY-NC-SA)
 * No commercial use
