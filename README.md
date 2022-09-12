@@ -1,6 +1,8 @@
 # floor-heating-proportional-valve
 A diy DC proportional heating valve actuator
 
+(created to work with [esp32_8ch_motor_shield](https://github.com/nliaudat/esp32_8ch_motor_shield))
+
 <img src="https://github.com/nliaudat/floor-heating-proportional-valve/blob/main/imgs/2022-09-11%2017.59.jpg" width="300">
 
 <img src="https://github.com/nliaudat/floor-heating-proportional-valve/blob/main/imgs/Capture.PNG" width="300">
