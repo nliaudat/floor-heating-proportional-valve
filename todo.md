@@ -14,4 +14,5 @@ Please make another version (version management) for each step in dev
 
 
 # Firmware 
-- Esphome based on https://github.com/nliaudat/floor-heating-controller
+- Suggested to be based on Esphome, starting point from https://github.com/nliaudat/floor-heating-controller
+- Add deep sleep support
