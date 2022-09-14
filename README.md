@@ -1,7 +1,7 @@
 # floor-heating-proportional-valve BETA and not finished 
 A smart DC proportional heating valve actuator
 
-<img src="https://github.com/nliaudat/floor-heating-proportional-valve/blob/main/imgs/demo1.gif">
+<img src="[https://github.com/nliaudat/floor-heating-proportional-valve/blob/main/imgs/demo1.gif](https://github.com/nliaudat/floor-heating-proportional-valve/blob/beta/imgs/demo1.gif)">
 
 # 3D printed proportional valve actuator 
 Print actuator
