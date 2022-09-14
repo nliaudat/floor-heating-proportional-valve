@@ -1,6 +1,7 @@
 # floor-heating-proportional-valve
 
-# !!! BETA !!!!
+# !!! BETA !!!! [Need help](https://github.com/nliaudat/floor-heating-proportional-valve/blob/beta/todo.md) to finish 
+
 A smart DC proportional heating valve actuator
 
 - Board : ESP-C3-01M
