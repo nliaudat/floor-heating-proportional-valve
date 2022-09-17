@@ -1,6 +1,6 @@
 # floor-heating-proportional-valve
 
-# !!! BETA !!!! [Need help](https://github.com/nliaudat/floor-heating-proportional-valve/blob/beta/todo.md) to finish 
+# !!! BETA !!!! [Need help](https://github.com/nliaudat/floor-heating-proportional-valve/blob/main/todo.md) to finish 
 
 A smart DC proportional heating valve actuator
 
@@ -10,7 +10,7 @@ A smart DC proportional heating valve actuator
 - LDO regulator : AMS1117
 - USB-UART : CH340C
 
-<img src="https://github.com/nliaudat/floor-heating-proportional-valve/blob/beta/imgs/demo1.gif">
+<img src="https://github.com/nliaudat/floor-heating-proportional-valve/blob/main/imgs/demo1.gif">
 
 # 3D printed proportional valve actuator 
 Print actuator
