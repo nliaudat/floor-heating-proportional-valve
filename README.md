@@ -25,10 +25,16 @@ insert m3 nut into slider :
 
 If you do not have M30x1.5 valve, look at [adapters](https://github.com/nliaudat/floor-heating-proportional-valve/tree/main/adapters)
 
+# Done :
+- Esphome compilation with ESP32-C3 : only "esp-idf" framework works with "platformio_options: board_build.flash_mode: dio" fix
+- Validate motor torque (can move 5mm), endstops at 90mV
+- Validate power input AMS1117-3.3V
+- Test proto board with external motorized valve (same motor and concept)
 
 # Todo :
 - add distance logics to esphome
 - fix ch340 issue #9
+- Finish the openscad enclosure with distance sensor
 
 ## Licence: 
 * Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC-BY-NC-SA)
