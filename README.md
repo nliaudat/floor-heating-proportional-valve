@@ -31,10 +31,14 @@ If you do not have M30x1.5 valve, look at [adapters](https://github.com/nliaudat
 - Validate power input AMS1117-3.3V
 - Test proto board with external motorized valve (same motor and concept)
 
-# Todo :
-- add distance logics to esphome
-- fix ch340 issue #9
-- Finish the openscad enclosure with distance sensor
+# Contribute :
+You can join easyeda project using that QR if you have skills in PCB creation.
+
+![qr](https://user-images.githubusercontent.com/6782613/190206632-bd1e3e5f-6982-4284-9096-a39a20921d45.png)
+
+make another version (version management) for each step in dev
+
+Please check [todo list](https://github.com/nliaudat/floor-heating-proportional-valve/blob/main/todo.md)
 
 ## Licence: 
 * Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC-BY-NC-SA)
