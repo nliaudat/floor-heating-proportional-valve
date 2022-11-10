@@ -1,0 +1,67 @@
+# change log 
+# v1:
+
+
+
+# for flashing : press boot button for 2-3 seconds before the serial connection initialize
+# After OTA update, the EN (reset) button must be pressed to run firmware
+# do not use gpio12 (MTDI)
+
+substitutions:
+  name: trv_valve_1
+  friendly_name: "TRV valve #1"
+  #must only consist of lowercase characters, the underscorecharacter and numbers. The character '#' cannot be used.
+  ch1_thermostat_name: ${name}
+  ch1_thermostat_sensor: bathroom_temperature_sensor  #name of the sensor
+                 #################
+                # Formula explanation : 
+                #################
+                # // get info from climate
+                # float current_temp = id(${ch1_thermostat_name}_thermostat).current_temperature;
+                # float target_temp_low = id(${ch1_thermostat_name}_thermostat).target_temperature_low;
+                # float target_temp_high = id(${ch1_thermostat_name}_thermostat).target_temperature_high ;
+                # float diff_temp = (target_temp_high + target_temp_low)/2 - current_temp;
+                #               
+                # //arduino map function :  return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min; in_min=-1;in_max=1;out_min=0;out_max=1
+                # //simplified =>  f(x) = (x+1)/2
+                # //rounded at 0.1 =>  f(x) = round(((x+1)/2)/0.1)*0.1
+                # //float target_position = round(((diff_temp+1)/2)/0.1)*0.1;
+                # float target_position = round(((((id(${ch1_thermostat_name}_thermostat).target_temperature_high + id(${ch1_thermostat_name}_thermostat).target_temperature_low)/2 - id(${ch1_thermostat_name}_thermostat).current_temperature)+1)/2)/0.1)*0.1;
+                
+  ch1_thermostat_position_formula: "round(((((id(${ch1_thermostat_name}_thermostat).target_temperature_high + id(${ch1_thermostat_name}_thermostat).target_temperature_low)/2 - id(${ch1_thermostat_name}_thermostat).current_temperature)+1)/2)/0.1)*0.1;"
+  ch1_default_target_temperature_low: 19 °C  # ASHRAE studies recommend 21°C with a band of 2°C which result in 90% occupant acceptability
+  ch1_default_target_temperature_high: 20 °C
+  
+
+  TZ: "Europe/Zurich" #timezone
+  
+  ch1_bemf_trigger: "0.20"
+ 
+  
+  #endstop_rollback_percent: "2" #percentage of rollback the cover will perform in case of endstop to remove heavy strenght on valve and prevent pushing up.
+  
+  
+  ####### NOT recommended to change #######
+
+
+
+packages:
+  wifi: !include wifi.yaml
+  board: !include board.yaml
+  time: !include time.yaml
+  climate: !include climate.yaml
+  script_termostat_check: !include script_termostat_check.yaml
+  script_calibrate_valves: !include script_calibrate_valves.yaml
+  switch_gpio: !include switch_gpio.yaml
+  switch_others: !include switch_others.yaml
+  inputs: !include inputs.yaml
+  covers: !include covers.yaml
+  sensor_bemf: !include sensor_bemf.yaml #back electromotive force (back EMF)
+  sensor_adc: !include sensor_adc.yaml
+  sensor_temperature: !include sensor_temperature.yaml
+  sensor_others: !include sensor_others.yaml
+  
+    
+# web_server:
+  # port: 80    
+

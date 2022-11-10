@@ -1,0 +1,24 @@
+   
+
+cover:
+    
+  - platform: endstop
+    name: ${name} cover
+    device_class: shutter
+    open_action:
+      - switch.turn_on: CH1_IB_pin
+      - switch.turn_off: CH1_IA_pin
+    open_duration: 60s #39s
+    open_endstop: BEMF_1_sensor
+    close_action:
+      - switch.turn_on: CH1_IA_pin
+      - switch.turn_off: CH1_IB_pin
+    close_duration: 60s #49s
+    close_endstop: BEMF_1_sensor
+    stop_action:
+      - switch.turn_off: CH1_IA_pin
+      - switch.turn_off: CH1_IB_pin
+    max_duration : 65s
+    #assumed_state: true
+    id: ${name}_cover
+

@@ -1,0 +1,74 @@
+esphome:
+  name: ${name}
+  platformio_options:
+    # board_build.f_flash: 40000000L
+    board_build.flash_mode: dio
+    # board_build.flash_size: 4MB
+  # on_boot:
+    # priority: -200
+    # then:
+        # - delay: 1min
+        # - script.execute: ${name}_valve_maintenance
+
+  project:
+    name: "nliaudat.trv_valve"
+    version: "0.1.dev"
+    
+# esp32:
+  # variant: ESP32C3
+  # board: esp32-c3-devkitm-1
+  # framework:
+    # type: esp-idf
+    
+esp32:
+  board: esp32-c3-devkitm-1
+  framework:
+    type: esp-idf
+    version: recommended
+    # Custom sdkconfig options
+    sdkconfig_options:
+      CONFIG_COMPILER_OPTIMIZATION_SIZE: y
+    # Advanced tweaking options
+    advanced:
+      ignore_efuse_mac_crc: false
+
+# esp32:
+  # board: esp32dev #esp32-c3-devkitm-1 #esp32dev
+  # variant : esp32c3
+  # framework:
+    # type: esp-idf #arduino #esp-idf  not ready missing json and async_tcp
+    # version: latest
+    # version: recommended #latest
+   # sdkconfig_options:
+     # CONFIG_COMPILER_OPTIMIZATION_SIZE: y
+
+preferences:
+  flash_write_interval: 60min
+  
+# Enable logging
+logger:
+  level: DEBUG #NONE# ERROR #INFO #DEBUG  #VERBOSE
+  #baud_rate: 0 #to disable logging via UART
+  logs:
+    adc: INFO
+    sensor: ERROR
+    binary_sensor: INFO
+    cover: INFO
+    switch: INFO
+    climate: INFO
+    endstop : DEBUG
+    text_sensor : ERROR
+    homeassistant.sensor: ERROR
+
+### debug mode :
+# logger:
+  # level: VERY_VERBOSE #NONE# ERROR #INFO #DEBUG  #VERBOSE
+
+# Enable Home Assistant API
+api:
+  reboot_timeout: 30min
+      
+
+ota:
+
+

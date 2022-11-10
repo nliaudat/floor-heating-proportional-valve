@@ -1,0 +1,18 @@
+
+  
+switch:
+    ### CH1
+  - platform: gpio
+    name: "CH1 IA"
+    pin: GPIO07
+    internal: true  
+    id: CH1_IA_pin
+    interlock: &interlock_group_CH1 [CH1_IA_pin, CH1_IB_pin]
+    restore_mode: always off
+  - platform: gpio
+    name: "CH1 IB"
+    pin: GPIO06
+    internal: true 
+    id: CH1_IB_pin
+    interlock: *interlock_group_CH1
+    restore_mode: always off

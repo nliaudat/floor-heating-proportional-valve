@@ -1,0 +1,38 @@
+### back electromotive force (back EMF)
+### https://en.wikipedia.org/wiki/Counter-electromotive_force
+
+
+binary_sensor:
+  - platform: template
+    id: BEMF_1_sensor
+    name: "BEMF ${name} sensor"
+    lambda: return ((id(BEMF_${name}_sensor_ADC).state >= id(${name}_bemf_trigger_1).state));
+    on_press:
+      then: 
+         - lambda: |-
+                if (id(${name}_cover).current_operation == COVER_OPERATION_OPENING) {
+                    auto call = id(${name}_cover).make_call();
+                    call.set_command_stop();
+                    call.perform();
+                    ESP_LOGD("main", "${name} opening endstop reached at %f V", id(BEMF_${name}_sensor_ADC).state);
+                    id(${name}_cover).position  = 1.0; //1.0 = 100% = OPEN
+                    id(${name}_cover).publish_state();
+                    //Rollback
+                    //auto call2 = id(${name}_cover).make_call();
+                    //call2.set_position(id(${name}_cover).position -id(${name}_rollback).state/100);
+                    //call2.perform();
+                    //ESP_LOGD("main", "Rollback ${name} -%f %% to remove strenght", id(${name}_rollback).state);
+                } else if (id(${name}_cover).current_operation == COVER_OPERATION_CLOSING) {
+                    auto call = id(${name}_cover).make_call();
+                    call.set_command_stop();
+                    call.perform();
+                    ESP_LOGD("main", "${name} closing endstop reached at %f V", id(BEMF_${name}_sensor_ADC).state);
+                    id(${name}_cover).position  = 0.0; //0.0 = 0% = CLOSED
+                    id(${name}_cover).publish_state();
+                    //Rollback
+                    //auto call2 = id(${name}_cover).make_call();
+                    //call2.set_position(id(${name}_cover).position +id(${name}_rollback).state/100);
+                    //call2.perform();
+                    //ESP_LOGD("main", "Rollback ${name} +%f %% to remove strenght", id(${name}_rollback).state);
+                }
+

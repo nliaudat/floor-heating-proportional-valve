@@ -1,0 +1,21 @@
+
+  
+switch:
+    #reboot
+  - platform: restart
+    name: "${friendly_name} restart"
+    icon: "mdi:restart"
+    id: ${name}_reboot    
+
+  - platform: template
+    name: "Valve maintenance"
+    turn_on_action:
+      - script.execute: ${name}_valve_maintenance
+       
+      
+  - platform: template
+    name: "Run ${ch1_thermostat_name} check"
+    turn_on_action:
+      - script.execute: ${name}_TH1_check    
+
+

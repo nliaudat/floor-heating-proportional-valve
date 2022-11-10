@@ -1,0 +1,18 @@
+
+sensor:
+#ADC2 pins cannot be used when Wi-Fi is used
+### in use the motor use 15-20 mV. At endstop, it raise to 50 mV
+  - platform: adc
+    pin: GPIO03
+    name: "ADC" #CH1 + CH2
+    update_interval: 500ms
+    attenuation : 2.5db # 100-1250mv  #0 for a full-scale voltage of 3.9V#6db #for a full-scale voltage of 2.2V #https://esphome.io/components/sensor/adc.html & https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/adc.html#_CPPv225adc1_config_channel_atten14adc1_channel_t11adc_atten_t
+    id : BEMF_${name}_sensor_ADC
+    
+  - platform: adc
+    pin: GPIO04
+    name: "Distance" # 0.72v closed to 0.81V open
+    update_interval: 100ms
+    #attenuation : 2.5db # 100-1250mv  #0 for a full-scale voltage of 3.9V#6db #for a full-scale voltage of 2.2V #https://esphome.io/components/sensor/adc.html & https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/adc.html#_CPPv225adc1_config_channel_atten14adc1_channel_t11adc_atten_t
+    id : DIST_${name}_sensor_ADC
+

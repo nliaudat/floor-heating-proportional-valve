@@ -1,0 +1,18 @@
+
+time:
+- platform: sntp
+  timezone : ${TZ}
+  servers:  [0.pool.ntp.org, 1.pool.ntp.org , 2.pool.ntp.org]
+  on_time:
+  - seconds: 0
+    minutes: 0
+    hours: 5
+    days_of_week: MON #monday at 5
+    then:
+      - switch.toggle: ${name}_reboot
+
+
+interval:
+  - interval: 15min
+    then:
+      - script.execute: ${name}_TH1_check

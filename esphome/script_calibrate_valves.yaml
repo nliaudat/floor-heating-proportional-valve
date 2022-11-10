@@ -1,0 +1,27 @@
+
+
+script:
+               
+  - id: ${name}_valve_maintenance
+    then:
+      - logger.log: "Calibrate ${name} cover"
+      - cover.close: ${name}_cover
+      - delay: 5s
+      - cover.open: ${name}_cover
+      - delay: 5s
+      - cover.close: ${name}_cover
+      - delay: 5s
+      - cover.open: ${name}_cover
+      - delay: 5s
+      - cover.close: ${name}_cover
+      - delay: 5s
+      - cover.open: ${name}_cover
+      - delay: 60s
+      - cover.close: ${name}_cover
+      - delay: 60s
+      - cover.close: ${name}_cover
+      - delay: 60s
+      - cover.close: ${name}_cover
+
+
+      

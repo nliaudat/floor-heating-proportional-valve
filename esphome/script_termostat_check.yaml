@@ -1,0 +1,26 @@
+
+
+script:
+
+  - id: ${name}_TH1_check
+    then:
+         - lambda: |-
+                if (id(${ch1_thermostat_name}_thermostat).mode == CLIMATE_MODE_OFF) {return;}
+                ESP_LOGD("main", "${name}_check triggered");
+
+                float target_position = ${ch1_thermostat_position_formula}
+                
+                //normalize
+                if (target_position >1) { target_position = 1;} 
+                if (target_position <0) { target_position = 0;} 
+                
+
+                //call movement if target_position change consequently
+                if (abs(id(${name}_cover).position - target_position) > id(${name}_min_movement).state/100) {
+                    auto call = id(${name}_cover).make_call();
+                    call.set_position(target_position);
+                    call.perform();
+                    ESP_LOGD("main", "Adjustment done for ${name} set to position %f", target_position);
+                }
+                
+ 
