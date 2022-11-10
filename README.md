@@ -25,6 +25,12 @@ insert m3 nut into slider :
 
 If you do not have M30x1.5 valve, look at [adapters](https://github.com/nliaudat/floor-heating-proportional-valve/tree/main/adapters)
 
+
+# Todo :
+- add distance logics to esphome
+- fix power supply issue #8
+- fix ch340 issue #9
+
 ## Licence: 
 * Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC-BY-NC-SA)
 * No commercial use
