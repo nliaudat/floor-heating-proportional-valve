@@ -31,6 +31,10 @@ If you do not have M30x1.5 valve, look at [adapters](https://github.com/nliaudat
 - Validate power input AMS1117-3.3V
 - Test proto board with external motorized valve (same motor and concept)
 
+<img src="https://github.com/nliaudat/floor-heating-proportional-valve/blob/main/imgs/test_valve.jpg" width="300">
+<img src="https://github.com/nliaudat/floor-heating-proportional-valve/blob/main/imgs/working_board.jpg" width="300">
+
+
 # Contribute :
 You can join easyeda project using that QR if you have skills in PCB creation (you must ask dev right on discussion with you easyeda username)
 
