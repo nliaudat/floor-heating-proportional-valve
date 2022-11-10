@@ -14,5 +14,5 @@ Please make another version (version management) for each step in dev
 
 
 # Firmware 
-- Suggested to be based on Esphome, starting point from https://github.com/nliaudat/floor-heating-controller
+- Add distance logics from opto sensor
 - Add deep sleep support
