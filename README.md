@@ -28,7 +28,6 @@ If you do not have M30x1.5 valve, look at [adapters](https://github.com/nliaudat
 
 # Todo :
 - add distance logics to esphome
-- fix power supply issue #8
 - fix ch340 issue #9
 
 ## Licence: 
