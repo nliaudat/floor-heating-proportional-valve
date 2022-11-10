@@ -32,7 +32,7 @@ If you do not have M30x1.5 valve, look at [adapters](https://github.com/nliaudat
 - Test proto board with external motorized valve (same motor and concept)
 
 # Contribute :
-You can join easyeda project using that QR if you have skills in PCB creation.
+You can join easyeda project using that QR if you have skills in PCB creation (you must ask dev right on discussion with you easyeda username)
 
 ![qr](https://user-images.githubusercontent.com/6782613/190206632-bd1e3e5f-6982-4284-9096-a39a20921d45.png)
 
