@@ -8,20 +8,16 @@ A smart DC proportional heating valve actuator
 - Motor driver : L9110s
 - Distance sensor : IR optocoupler (ITR8307)
 - LDO regulator : AMS1117
-- USB-UART : CH340C
+- USB-UART : CH340C (removed)
 
 <img src="https://github.com/nliaudat/floor-heating-proportional-valve/blob/main/imgs/demo1.gif">
 
 # 3D printed proportional valve actuator 
-Print actuator (not finished)
+Print actuator
 
 Buy a motor : [GA12-N20-M3 15rpm 3V](https://fr.aliexpress.com/item/4000311295036.html?spm=a2g0s.12269583.0.0.18834b0ejbgKSj) ~3.5 $
 
 <img src="https://github.com/nliaudat/floor-heating-proportional-valve/blob/main/imgs/GA12YN20-M3_dimensions.png" width="300">
-
-insert m3 nut into slider : 
-
-<img src="https://github.com/nliaudat/floor-heating-proportional-valve/blob/main/imgs/nut.PNG" width="300">
 
 If you do not have M30x1.5 valve, look at [adapters](https://github.com/nliaudat/floor-heating-proportional-valve/tree/main/adapters)
 
@@ -30,10 +26,9 @@ If you do not have M30x1.5 valve, look at [adapters](https://github.com/nliaudat
 - Validate motor torque (can move 5mm), endstops at 90mV
 - Validate power input AMS1117-3.3V
 - Test proto board with external motorized valve (same motor and concept)
+- Validate opto sensor 1-5mm
 
 <img src="https://github.com/nliaudat/floor-heating-proportional-valve/blob/main/imgs/proto_board.jpg" width="300">
-<img src="https://github.com/nliaudat/floor-heating-proportional-valve/blob/main/imgs/test_valve.jpg" width="300">
-<img src="https://github.com/nliaudat/floor-heating-proportional-valve/blob/main/imgs/working_board.jpg" width="300">
 
 
 # Contribute :
