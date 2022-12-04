@@ -6,7 +6,7 @@ A smart DC proportional heating valve actuator
 
 - Board : ESP-C3-01M
 - Motor driver : L9110s
-- Distance sensor : IR optocoupler (IRT5307)
+- Distance sensor : IR optocoupler (ITR8307)
 - LDO regulator : AMS1117
 - USB-UART : CH340C
 
