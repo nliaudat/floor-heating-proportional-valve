@@ -27,6 +27,7 @@ If you do not have M30x1.5 valve, look at [adapters](https://github.com/nliaudat
 - Validate power input AMS1117-3.3V
 - Test proto board with external motorized valve (same motor and concept)
 - Validate opto sensor 1-5mm
+- Working openscad enclosure with sliding cursor to get IR-opto distance
 
 <img src="https://github.com/nliaudat/floor-heating-proportional-valve/blob/main/imgs/proto_board.jpg" width="300">
 
