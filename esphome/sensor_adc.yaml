@@ -4,15 +4,51 @@ sensor:
 ### in use the motor use 15-20 mV. At endstop, it raise to 50 mV
   - platform: adc
     pin: GPIO03
-    name: "ADC" #CH1 + CH2
+    name: "ADC" 
     update_interval: 500ms
     attenuation : 2.5db # 100-1250mv  #0 for a full-scale voltage of 3.9V#6db #for a full-scale voltage of 2.2V #https://esphome.io/components/sensor/adc.html & https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/adc.html#_CPPv225adc1_config_channel_atten14adc1_channel_t11adc_atten_t
     id : BEMF_${name}_sensor_ADC
     
+    #ITR8307
   - platform: adc
     pin: GPIO04
-    name: "Distance" # 0.72v closed to 0.81V open
+    name: "Opto voltage" # 0.68v closed to 0.81V open with aluminum reflector
     update_interval: 100ms
+    accuracy_decimals: 4
+    #filters:
+     # - throttle: 1s
+     # - heartbeat: 5s
+     # - debounce: 0.2s
+    #filters:
+    #- multiply: 2.0 
     #attenuation : 2.5db # 100-1250mv  #0 for a full-scale voltage of 3.9V#6db #for a full-scale voltage of 2.2V #https://esphome.io/components/sensor/adc.html & https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/adc.html#_CPPv225adc1_config_channel_atten14adc1_channel_t11adc_atten_t
     id : DIST_${name}_sensor_ADC
+    
+    
+  - platform: template
+    name: "Distance_mm"
+    lambda: return (id(DIST_${name}_sensor_ADC).state) ;
+    filters:
+    - multiply: 100
+    - calibrate_linear:
+          # Map 0.0 (from sensor) to 0.0 (true value)
+          - 69.0 -> 0.0
+          - 80.5 -> 5.0
+    #- offset: -0.2
+    update_interval: 200ms
+    id: DIST_${name}_mm
+    
+  - platform: template
+    name: "Distance_percent"
+    lambda: return (id(DIST_${name}_sensor_ADC).state) ;
+    filters:
+    - multiply: 100
+    - calibrate_linear:
+          # Map 0.0 (from sensor) to 0.0 (true value)
+          - 69.0 -> 0.0
+          - 80.5 -> 100.0
+    #- offset: -1.0
+    update_interval: 200ms
+    id: DIST_${name}_percent
+
 

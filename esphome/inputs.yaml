@@ -5,9 +5,9 @@ number:
   - platform: template
     name: "bemf_trigger_1"
     optimistic: true
-    min_value: 0.05
-    max_value: 150.00
-    step: 0.05
+    min_value: 0.055
+    max_value: 0.110
+    step: 0.005
     restore_value: true
     initial_value: ${ch1_bemf_trigger}
     id: ${name}_bemf_trigger_1
@@ -29,7 +29,7 @@ number:
     optimistic: true
     min_value: 1
     max_value: 25
-    step: 1
+    step: 0.5
     restore_value: true
-    initial_value: 5
+    initial_value: 2.5
     id: ${name}_min_movement 

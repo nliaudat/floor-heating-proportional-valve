@@ -35,7 +35,7 @@ substitutions:
 
   TZ: "Europe/Zurich" #timezone
   
-  ch1_bemf_trigger: "0.20"
+  ch1_bemf_trigger: "0.075"
  
   
   #endstop_rollback_percent: "2" #percentage of rollback the cover will perform in case of endstop to remove heavy strenght on valve and prevent pushing up.

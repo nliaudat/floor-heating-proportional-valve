@@ -49,6 +49,8 @@ preferences:
 logger:
   level: DEBUG #NONE# ERROR #INFO #DEBUG  #VERBOSE
   #baud_rate: 0 #to disable logging via UART
+  #hardware_uart: USB_SERIAL_JTAG
+  
   logs:
     adc: INFO
     sensor: ERROR
@@ -59,6 +61,18 @@ logger:
     endstop : DEBUG
     text_sensor : ERROR
     homeassistant.sensor: ERROR
+    
+# uart:
+  # tx_pin: 7
+  # rx_pin: 6
+  # baud_rate: 115200
+  # debug:
+    # direction: BOTH
+    # dummy_receiver: false
+    # after:
+      # delimiter: "\n"
+    # sequence:
+      # - lambda: UARTDebug::log_string(direction, bytes);
 
 ### debug mode :
 # logger:
