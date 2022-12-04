@@ -30,7 +30,7 @@ If you do not have M30x1.5 valve, look at [adapters](https://github.com/nliaudat
 - Working openscad enclosure with sliding cursor to get IR-opto distance
 
 <img src="https://github.com/nliaudat/floor-heating-proportional-valve/blob/main/imgs/proto_board.jpg" width="300">
-
+<img src="https://github.com/nliaudat/floor-heating-proportional-valve/blob/main/imgs/2022-12-04%2017.08.jpg" width="300">
 
 # Contribute :
 You can join easyeda project using that QR if you have skills in PCB creation (you must ask dev right on discussion with you easyeda username)
