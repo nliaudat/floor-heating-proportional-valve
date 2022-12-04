@@ -1,6 +1,6 @@
 # floor-heating-proportional-valve
 
-# !!! BETA !!!! [Feel free to help](https://github.com/nliaudat/floor-heating-proportional-valve/blob/main/todo.md) to finish 
+# !!! BETA !!!! [Feel free to help](https://github.com/nliaudat/floor-heating-proportional-valve/blob/main/todo.md)
 
 A smart DC proportional heating valve actuator
 
