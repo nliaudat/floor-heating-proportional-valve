@@ -33,7 +33,7 @@ If you do not have M30x1.5 valve, look at [adapters](https://github.com/nliaudat
 <img src="https://github.com/nliaudat/floor-heating-proportional-valve/blob/main/imgs/2022-12-04%2017.08.jpg" width="300">
 
 # Contribute :
-You can join easyeda project using that QR if you have skills in PCB creation (you must ask dev right on discussion with you easyeda username)
+You can join easyeda project using that QR if you have skills in PCB creation 
 
 ![qr](https://user-images.githubusercontent.com/6782613/190206632-bd1e3e5f-6982-4284-9096-a39a20921d45.png)
 
