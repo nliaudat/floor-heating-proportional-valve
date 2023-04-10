@@ -5,5 +5,4 @@
 - Add battery ?
 
 # Firmware 
-- Add distance logics from opto sensor
 - Add deep sleep support
