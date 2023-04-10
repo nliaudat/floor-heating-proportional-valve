@@ -8,7 +8,6 @@ A smart DC proportional heating valve actuator
 - Motor driver : L9110s
 - Distance sensor : IR optocoupler (ITR8307)
 - LDO regulator : AMS1117
-- USB-UART : CH340C (removed)
 
 <img src="https://github.com/nliaudat/floor-heating-proportional-valve/blob/main/imgs/demo1.gif">
 
