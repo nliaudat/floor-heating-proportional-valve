@@ -1,6 +1,5 @@
 # Electronics
 - Add battery ?
-- fix ch340 issue #9
 
 # Box
 - Add battery ?
