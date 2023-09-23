@@ -35,7 +35,7 @@ If you do not have M30x1.5 valve, look at [adapters](https://github.com/nliaudat
 # Contribute :
 You can join easyeda project using that QR if you have skills in PCB creation 
 
-![qr](https://user-images.githubusercontent.com/6782613/190206632-bd1e3e5f-6982-4284-9096-a39a20921d45.png)
+<img src="https://user-images.githubusercontent.com/6782613/190206632-bd1e3e5f-6982-4284-9096-a39a20921d45.png">(https://easyeda.com/editor#project_id=b9bfb0ffaee34350a2c27851738bd9fe)
 
 make another version (version management) for each step in dev
 
