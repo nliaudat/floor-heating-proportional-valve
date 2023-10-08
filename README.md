@@ -33,11 +33,9 @@ If you do not have M30x1.5 valve, look at [adapters](https://github.com/nliaudat
 <img src="https://github.com/nliaudat/floor-heating-proportional-valve/blob/main/imgs/2022-12-04%2017.08.jpg" width="300">
 
 # Contribute :
-You can join easyeda project using that QR if you have skills in PCB creation 
+You can join easyeda project if you have skills in PCB creation 
 
-<img src="https://github.com/nliaudat/floor-heating-proportional-valve/blob/main/imgs/QR.png">
-
-[https://oshwlab.com/nliaudat/valve_actuator_pro](https://oshwlab.com/nliaudat/valve_actuator_pro)
+[https://oshwlab.com/nliaudat/floor-heating-valve](https://oshwlab.com/nliaudat/floor-heating-valve)
 
 make another version (version management) for each step in dev
 
