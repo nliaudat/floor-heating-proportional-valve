@@ -12,6 +12,10 @@ Board : custom (~8.8$) with :
 
 <img src="https://github.com/nliaudat/floor-heating-proportional-valve/blob/main/imgs/demo1.gif">
 
+# Can act as a simple proportionnal valve without intelligence : 
+
+[Look at valve only version](https://github.com/nliaudat/floor-heating-proportional-valve/tree/main/pcb/valve_only)
+
 # 3D printed proportional valve actuator 
 Print actuator
 
